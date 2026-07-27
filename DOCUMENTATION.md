@@ -60,34 +60,34 @@ O tema **Equipe** entrou parcialmente: o case menciona "cobertura de horário de
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│  TELA 1 · Visão da Semana                                │
-│  Semana de referência: [seletor]                         │
+│  TELA 1 · Visão da Semana                               │
+│  Semana de referência: [seletor]                        │
 ├─────────────────────────────────────────────────────────┤
-│  [Prioridade: N]  [Atenção: N]  [Estável: N]  [Insuf: N] │
+│  [Prioridade: N]  [Atenção: N]  [Estável: N]  [Insuf: N]│
 ├─────────────────────────────────────────────────────────┤
-│                                                           │
-│   tendência          Quadrante de priorização            │
-│      ▲                (atingimento × tendência,          │
-│      │  •  •           cor = classificação,              │
-│  ────┼────────▶        cada ponto = 1 loja)               │
-│      │  •              │
-│      │                                                    │
+│                                                         │
+│   tendência          Quadrante de priorização           │
+│      ▲                (atingimento × tendência,         │
+│      │  •  •           cor = classificação,             │
+│  ────┼────────▶        cada ponto = 1 loja)            │
+│      │  •                                               │
+│      │                                                  │
 ├─────────────────────────────────────────────────────────┤
-│  Ranking completo (tabela ordenada por prioridade)        │
+│  Ranking completo (tabela ordenada por prioridade)      │
 └─────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────┐
-│  TELA 2 · Diagnóstico da Loja        [seletor de loja]   │
+│  TELA 2 · Diagnóstico da Loja        [seletor de loja]  │
 ├─────────────────────────────────────────────────────────┤
-│  Nome · formato · modelo · status                         │
-│  Atingimento: X%      Tendência: Y%                       │
-├───────────────┬───────────────┬───────────────────────────┤
-│  💰 Margem     │  😊 Cliente    │  👥 Equipe                │
-│  margem %      │  nota média    │  tickets/hora             │
-│  desconto %    │  espera média  │  vs. média do formato     │
-│  desperdício % │  (ou "insuf.") │                           │
-├───────────────┴───────────────┴───────────────────────────┤
-│  Histórico de faturamento — 12 semanas (linha + meta)      │
+│  Nome · formato · modelo · status                       │
+│  Atingimento: X%      Tendência: Y%                     │
+├────────────────┬────────────────┬───────────────────────┤
+│  💰 Margem     │  😊 Cliente   │  👥 Equipe            │
+│  margem %      │  nota média    │  tickets/hora         │
+│  desconto %    │  espera média  │  vs. média do formato │
+│  desperdício % │  (ou "insuf.") │                       │
+├────────────────┴────────────────┴───────────────────────┤
+│  Histórico de faturamento — 12 semanas (linha + meta)   │
 └─────────────────────────────────────────────────────────┘
 ```
 
