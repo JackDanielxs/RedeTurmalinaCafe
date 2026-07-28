@@ -23,9 +23,9 @@ Sistema de apoio à decisão semanal para a diretora de operações, a partir do
 - `data_pipeline.py` — leitura e normalização dos 4 CSVs (datas, moeda, categorias, ids, sentinelas)
 - `indicadores.py` — cálculo dos indicadores de triagem, margem, cliente e equipe
 - `app.py` — interface Streamlit (Tela 1: Visão da Semana · Tela 2: Diagnóstico da Loja)
-- `DOCUMENTO_PROJETO.md` — usuária, perguntas, mapa de dados, dicionário de indicadores, wireframe, alternativas descartadas
-- `DOCUMENTACAO_DECISOES.md` — um parágrafo por decisão relevante
-- `REGISTRO_USO_IA.md` — registro de uso de IA conforme seção 06 do case
+- `DOCUMENTATION.md` — usuária, perguntas, mapa de dados, dicionário de indicadores, wireframe, alternativas descartadas
+- `DECISIONS.md` — um parágrafo por decisão relevante
+- `AI_USAGE_LOGS.md` — registro de uso de IA conforme seção 06 do case
 
 ## Stack e justificativa
 
