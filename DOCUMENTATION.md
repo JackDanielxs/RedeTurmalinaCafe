@@ -38,7 +38,7 @@ O tema **Equipe** entrou parcialmente: o case menciona "cobertura de horário de
 | Margem sobre insumos | `turmalina_vendas_diarias.csv` | `faturamento_bruto`, `custo_insumos` | Soma de 4 semanas fechadas; `(fat − custo) / fat` |
 | % desconto | `turmalina_vendas_diarias.csv` | `descontos`, `faturamento_bruto` | Soma de 4 semanas fechadas |
 | % desperdício | `turmalina_vendas_diarias.csv` | `valor_desperdicio`, `custo_insumos` | Soma de 4 semanas fechadas |
-| Nota média / tempo de espera | `turmalina_avaliacoes.csv` | `nota`, `tempo_espera_min` | Nota normalizada (extenso/estrelas/vírgula → 1–5); sentinela `999` em tempo de espera tratado como ausente; janela de 90 dias (ver seção 4); mínimo de 5 avaliações para exibir |
+| Nota média / tempo de espera | `turmalina_avaliacoes.csv` | `nota`, `tempo_espera_min` | Nota normalizada (extenso/estrelas/vírgula → 1–5); `999` em tempo de espera tratado como ausente; janela de 90 dias (ver seção 4); mínimo de 5 avaliações para exibir |
 | Produtividade de equipe | `turmalina_vendas_diarias.csv`, `turmalina_lojas.csv` | `num_tickets`, `horas_trabalhadas_equipe`, `formato` | Soma de 4 semanas; linhas com horas = 0 e faturamento > 0 tratadas como erro de captura (NaN), não como zero real; comparação contra média do mesmo formato de loja |
 
 `turmalina_itens.csv` foi tratado (categorias normalizadas, preço parseado) mas **não alimenta nenhum indicador da v1** — ver seção 6 (alternativas descartadas).
@@ -91,12 +91,12 @@ O tema **Equipe** entrou parcialmente: o case menciona "cobertura de horário de
 └─────────────────────────────────────────────────────────┘
 ```
 
-Divergência entre wireframe e protótipo final: o wireframe previa 3 blocos de diagnóstico lado a lado sem gráfico de histórico; o histórico de 12 semanas foi adicionado durante a implementação porque, sem ele, "tendência" na Tela 1 fica um número solto — o gráfico dá o contexto visual de por que a loja está classificada como está.
+Divergência entre wireframe e protótipo final: o wireframe previa 3 blocos de diagnóstico lado a lado sem gráfico de histórico; o histórico de 12 semanas foi adicionado durante a implementação porque, sem ele, "tendência" na Tela 1 fica um número solto. O gráfico dá o contexto visual de por que a loja está classificada como está.
 
 ## 6. Alternativas descartadas
 
-- **Indicador de ticket médio** (faturamento ÷ tickets): descartado como indicador de triagem porque varia estruturalmente por formato de loja (quiosque vende itens mais baratos por natureza) e por si só não aponta ação — dado interessante, mas não decisório na cadência semanal proposta.
-- **Mix de produtos (`turmalina_itens.csv`) como indicador de diagnóstico**: descartado da v1. A granularidade é mensal, não semanal — incompatível com o ritmo do sistema — e 85 linhas sem `custo_unitario` (5% do arquivo) tornariam qualquer indicador de margem por categoria parcialmente furado. Fica registrado como extensão natural para uma v2 com cadência mensal complementar.
-- **Score único de priorização** (um número que resume tudo): descartado em favor do quadrante (atingimento × tendência). Um score esconde a causa; o quadrante já separa "problema crônico" (abaixo da meta, estável) de "problema em formação" (dentro da meta, mas caindo) — informação que se perderia num número só.
-- **Tela única com os 4 diagnósticos de todas as 14 lojas**: descartada por transformar o sistema em planilha navegável em vez de ferramenta de decisão — contraria a própria premissa de capacidade (2 lojas/semana).
-- **Gráfico de barras comparando faturamento absoluto entre lojas**: descartado porque compara lojas de porte e tempo de operação muito diferentes sem normalizar — um gráfico honesto sobre um eixo desonesto para a decisão em questão.
+- **Indicador de ticket médio** (faturamento ÷ tickets): descartado como indicador de triagem porque varia estruturalmente por formato de loja e por si só não aponta ação.
+- **Mix de produtos (`turmalina_itens.csv`) como indicador de diagnóstico**: descartado da v1. A granularidade é mensal, não semanal; incompatível com o ritmo do sistema; e 85 linhas sem `custo_unitario` (5% do arquivo) tornariam qualquer indicador de margem por categoria furado. Fica registrado como extensão para uma possível v2 com cadência mensal complementar.
+- **Score único de priorização** (um número que resume tudo): descartado em favor do quadrante (atingimento × tendência). Um score esconde a causa; o quadrante já separa "problema crônico" (abaixo da meta, estável) de "problema em formação" (dentro da meta, mas caindo).
+- **Tela única com os 4 diagnósticos de todas as 14 lojas**: descartada por transformar o sistema em planilha navegável em vez de ferramenta de decisão (premissa de capacidade (2 lojas/semana)).
+- **Gráfico de barras comparando faturamento entre lojas**: descartado porque compara lojas de porte e tempo de operação muito diferentes sem normalizar.
