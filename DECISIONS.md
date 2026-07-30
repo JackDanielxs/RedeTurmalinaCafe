@@ -33,4 +33,5 @@ Alternativa considerada: exibir a média mesmo com poucas avaliações. O crité
 Alternativa considerada: comparar todas as lojas contra uma única média de rede. O critério foi que quiosque, loja de rua e loja de shopping têm operações estruturalmente diferentes. Uma média única penalizaria sistematicamente um formato inteiro. A decisão seria invalidada se a rede padronizasse operação a ponto de os formatos deixarem de ser estruturalmente distintos.
 
 **`turmalina_itens.csv` foi limpo mas não virou indicador na v1.**
+
 Alternativa considerada: incluir margem por categoria de produto como quinto bloco de diagnóstico. O critério contra foi granularidade (mensal, incompatível com a cadência semanal do resto do sistema) somada à lacuna de 5% em `custo_unitario`, que tornaria a margem por categoria parcialmente estimada sem sinalização clara disso na tela. A decisão seria invalidada se o sistema evoluísse para uma segunda cadência de revisão mensal, onde esse descompasso de granularidade deixaria de ser um problema.
