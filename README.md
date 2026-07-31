@@ -29,4 +29,4 @@ Sistema de apoio à decisão semanal para a diretora de operações, a partir do
 
 ## Stack e justificativa
 
-Python + Streamlit + Plotly. Justificativa: o volume e a variedade de tratamento de dados (parsing de datas em 3 formatos, moeda em string, categorias livres) pedem uma linguagem de propósito geral com pandas; Streamlit entrega uma interface interativa sem exigir front-end separado, mantendo o protótipo em um único ambiente reproduzível.
+Python + Streamlit + Plotly. O volume e a variedade de tratamento de dados (parsing de datas, moeda em string, categorias livres) pedem uma linguagem de propósito geral com pandas; Streamlit entrega uma interface interativa sem exigir front-end separado, mantendo o protótipo em um único ambiente reproduzível.
